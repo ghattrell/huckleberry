@@ -3,10 +3,89 @@
   font-family: 'Lato', sans-serif;
 }
 
+:root {
+  --primary-green: hsl(160deg, 100%, 30%);
+  --secondary-gold-lighter: hsl(45deg, 100%, 50%);
+  --secondary-gold-darker: hsl(45deg, 100%, 40%);
+
+  /* greys */
+  --black: hsl(0deg, 0%, 0%);
+  --very-dark-grey: hsl(0deg, 0%, 10%);
+  --dark-grey: hsl(0deg, 0%, 30%);
+  --medium-grey: hsl(0deg, 0%, 40%);
+  --light-grey: hsl(0deg, 0%, 60%);
+  --white: hsl(0deg, 0%, 100%);
+
+  /* fonts */
+  --font-small: 0.875rem;
+  --font-regular: 1rem;
+  --font-regular-lg: 1.25rem;
+  --font-medium: 1.5em;
+  --font-large: 2rem;
+}
+
 html,
 body {
   margin: 0;
   padding: 0;
+  font-size: 18px;
 }
 
 /* Add styles here! */
+
+h1 {
+  font-size: var(--font-medium);
+  margin-bottom: 48px;
+}
+
+h2 {
+  font-size: var(--font-regular-lg);
+}
+
+.max-width-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.intro-chunk {
+  padding: 24px 16px;
+}
+
+.intro-chunk p {
+  color: var(--very-dark-grey);
+  max-width: 300px;
+}
+
+.intro-chunk p strong {
+  color: var(--primary-green)
+}
+
+main {
+  border-top: 8px solid var(--dark-grey);
+  background: var(--light-grey);
+  padding: 96px 0;
+}
+
+main .card {
+  padding: 16px;
+  background: var(--white);
+  z-index: 1000;
+  border-bottom: 8px solid var(--dark-grey);
+}
+
+.card p {
+  font-size: var(--font-small);
+}
+
+.card p:last-child {
+  margin-bottom: 0;
+}
+
+.indented-heading {
+  background: var(--secondary-gold-lighter);
+  max-width: fit-content;
+  border-bottom: 4px solid var(--secondary-gold-darker);
+  padding: 8px 24px;
+  margin-left: -24px;
+  margin-top: -8px;
+}
